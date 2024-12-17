@@ -4,8 +4,8 @@ import * as ReactDOM from 'react-dom/client'; // Update to use 'react-dom/client
 
 const Welcome = () => {
   return (
-    <div className="container">
-      <h1>Welcome to React!</h1>
+    <div className="p-4 m-4 text-center bg-blue-100 border-2 border-blue-500">
+      <h1>Welcome to Rails with React!</h1>
     </div>
   );
 };
