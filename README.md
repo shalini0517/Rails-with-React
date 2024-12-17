@@ -1,6 +1,6 @@
 # Rails + React Integration
 
-A modern setup combining Rails with React using esbuild and Bootstrap.
+A modern setup combining Rails with React using esbuild and Bootstrap and tailwind css.
 
 Author : Shalini
 
@@ -80,6 +80,8 @@ start server
 ```bash
  bin/dev
 
+# Tailwind CSS
+https://tailwindcss.com/docs/guides/ruby-on-rails
 
 
 
