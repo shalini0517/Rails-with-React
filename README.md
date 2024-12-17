@@ -1,24 +1,84 @@
-# README
+# Rails + React Integration
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A modern setup combining Rails with React using esbuild and Bootstrap.
+Author : Shalini
 
-Things you may want to cover:
+## Prerequisites
 
-* Ruby version
+- Ruby
+- Yarn/npm
 
-* System dependencies
+## Quick Setup
 
-* Configuration
+1. Create a new Rails app with esbuild:
+```bash
+    rails new railsapp -j=esbuild
 
-* Database creation
+2. Add Bootstrap support:
 
-* Database initialization
+Add to Gemfile:
+```ruby:Gemfile
+gem 'cssbundling-rails'
+Run bundle install
+```bash
 
-* How to run the test suite
+3. Generate initial Rails structure:
+```bash
+rails g controller home index
 
-* Services (job queues, cache servers, search engines, etc.)
+4. Setup React:
 
-* Deployment instructions
+Install React dependencies:
+```bash
+yarn add react react-dom
 
-* ...
+## Project Structure
+
+app/
+├── javascript/
+│   ├── react/
+│   │   ├── src/
+│   │   │   ├── components/
+│   │   │   └── index.js
+│   └── application.js
+└── views/
+    └── home/
+        └── index.html.erb
+
+application.js
+
+import "./react/src/index"
+
+home/index.html.erb
+<div id="welcome"></div>
+
+component
+
+import * as React from 'react';
+import * as ReactDOM from 'react-dom/client';
+
+const Welcome = () => {
+  return (
+    <div className="container">
+      <h1>Welcome to React!</h1>
+    </div>
+  );
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const rootElement = document.getElementById('welcome');
+  if (rootElement) {
+    const root = ReactDOM.createRoot(rootElement);
+    root.render(<Welcome />);
+  }
+});
+
+export default Welcome;
+
+start server
+```bash
+ bin/dev
+
+
+
+
