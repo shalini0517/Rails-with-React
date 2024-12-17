@@ -1,6 +1,7 @@
 # Rails + React Integration
 
 A modern setup combining Rails with React using esbuild and Bootstrap.
+
 Author : Shalini
 
 ## Prerequisites
