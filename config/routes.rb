@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  get '/api/lists', to: 'api/lists#index'
+  namespace :api do
+    resources :lists, only: [:index, :destroy, :create]
+  end
 end
 
