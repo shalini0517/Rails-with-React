@@ -15,13 +15,17 @@ Author : Shalini
 ```bash
     rails new railsapp -j=esbuild
 
-2. Add Bootstrap support:
+2. Add css and bootstrap:
 
 Add to Gemfile:
 ```ruby:Gemfile
-gem 'cssbundling-rails'
+    gem 'cssbundling-rails'
 Run bundle install
+
+
+Run:
 ```bash
+rails css:install:bootstrap
 
 3. Generate initial Rails structure:
 ```bash
@@ -31,7 +35,7 @@ rails g controller home index
 
 Install React dependencies:
 ```bash
-yarn add react react-dom
+npm install react react-dom
 
 ## Project Structure
 
